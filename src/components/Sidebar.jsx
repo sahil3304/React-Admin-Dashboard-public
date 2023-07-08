@@ -33,14 +33,14 @@ const Sidebar = () => {
       <div className="logo">
         <img src={Logo} alt="logo" />
         <span>
-          Sh<span>o</span>ps
+          Con<span>o</span>suire
         </span>
       </div>
 
       <div className="menu">
         {SidebarData.map((item, index) => {
           return (
-            <div
+           <div
               className={selected === index ? "menuItem active" : "menuItem"}
               key={index}
               onClick={() => setSelected(index)}
@@ -52,7 +52,7 @@ const Sidebar = () => {
         })}
         {/* signoutIcon */}
         <div className="menuItem">
-          <UilSignOutAlt />
+          <UilSignOutAlt /><span><a href="http://localhost:3002/">click here </a></span>
         </div>
       </div>
     </motion.div>

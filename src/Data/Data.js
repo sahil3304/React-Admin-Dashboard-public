@@ -25,20 +25,11 @@ export const SidebarData = [
   },
   {
     icon: UilClipboardAlt,
-    heading: "Orders",
+    heading: <a href="http://localhost:3002/">Menu  </a>,
   },
-  {
-    icon: UilUsersAlt,
-    heading: "Customers",
-  },
-  {
-    icon: UilPackage,
-    heading: 'Products'
-  },
-  {
-    icon: UilChart,
-    heading: 'Analytics'
-  },
+ 
+  
+  
 ];
 
 // Analytics Cards Data

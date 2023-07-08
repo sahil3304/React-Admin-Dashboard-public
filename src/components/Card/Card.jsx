@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Card.css";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -7,22 +7,16 @@ import { UilTimes } from "@iconscout/react-unicons";
 import Chart from "react-apexcharts";
 
 // parent Card
-
 const Card = (props) => {
-  const [expanded, setExpanded] = useState(false);
   return (
     <AnimateSharedLayout>
-      {expanded ? (
-        <ExpandedCard param={props} setExpanded={() => setExpanded(false)} />
-      ) : (
-        <CompactCard param={props} setExpanded={() => setExpanded(true)} />
-      )}
+      <CompactCard param={props} />
     </AnimateSharedLayout>
   );
 };
 
 // Compact Card
-function CompactCard({ param, setExpanded }) {
+function CompactCard({ param }) {
   const Png = param.png;
   return (
     <motion.div
@@ -32,7 +26,6 @@ function CompactCard({ param, setExpanded }) {
         boxShadow: param.color.boxShadow,
       }}
       layoutId="expandableCard"
-      onClick={setExpanded}
     >
       <div className="radialBar">
         <CircularProgressbar
@@ -51,14 +44,13 @@ function CompactCard({ param, setExpanded }) {
 }
 
 // Expanded Card
-function ExpandedCard({ param, setExpanded }) {
+function ExpandedCard({ param }) {
   const data = {
     options: {
       chart: {
         type: "area",
         height: "auto",
       },
-
       dropShadow: {
         enabled: false,
         enabledOnSeries: undefined,
@@ -68,7 +60,6 @@ function ExpandedCard({ param, setExpanded }) {
         color: "#000",
         opacity: 0.35,
       },
-
       fill: {
         colors: ["#fff"],
         type: "gradient",
@@ -112,10 +103,10 @@ function ExpandedCard({ param, setExpanded }) {
       }}
       layoutId="expandableCard"
     >
-      <div style={{ alignSelf: "flex-end", cursor: "pointer", color: "white" }}>
-        <UilTimes onClick={setExpanded} />
+      <div style={{ alignSelf: "flex-end", color: "white" }}>
+        <UilTimes />
       </div>
-        <span>{param.title}</span>
+      <span>{param.title}</span>
       <div className="chartContainer">
         <Chart options={data.options} series={param.series} type="area" />
       </div>
