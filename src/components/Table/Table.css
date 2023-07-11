@@ -23,6 +23,10 @@ th {
   color: #00b5ff !important;
 }
 
+.Pending{
+  display:flex;
+}
+
 @media screen and (max-width: 1200px) {
   .Table {
     width: 170%;
@@ -57,3 +61,5 @@ th {
   border-radius: 4px;
   cursor: pointer;
 }
+
+

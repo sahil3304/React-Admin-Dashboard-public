@@ -25,7 +25,7 @@ export const SidebarData = [
   },
   {
     icon: UilClipboardAlt,
-    heading: <a href="http://localhost:3002/">Menu  </a>,
+    heading: <a href="http://localhost:3001/">Menu  </a>,
   },
  
   
@@ -40,8 +40,8 @@ export const cardsData = [
       backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
       boxShadow: "0px 10px 20px 0px #e0c6f5",
     },
-    barValue: 70,
-    value: "25,970",
+    barValue: 40,
+    value: "2500",
     png: UilUsdSquare,
     series: [
       {
@@ -56,8 +56,8 @@ export const cardsData = [
       backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
       boxShadow: "0px 10px 20px 0px #FDC0C7",
     },
-    barValue: 80,
-    value: "14,270",
+    barValue: 30,
+    value: "1400",
     png: UilMoneyWithdrawal,
     series: [
       {
@@ -89,20 +89,20 @@ export const cardsData = [
 export const UpdatesData = [
   {
     img: img1,
-    name: "Andrew Thomas",
-    noti: "has ordered Apple smart watch 2500mh battery.",
+    name: "sahil",
+    noti: "has ordered biryani .",
     time: "25 seconds ago",
   },
   {
     img: img2,
-    name: "James Bond",
-    noti: "has received Samsung gadget for charging battery.",
+    name: "sarvaswa",
+    noti: "has received his order.",
     time: "30 minutes ago",
   },
   {
     img: img3,
-    name: "Iron Man",
-    noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
+    name: "arjun",
+    noti: "has ordered pizza.",
     time: "2 hours ago",
   },
 ];

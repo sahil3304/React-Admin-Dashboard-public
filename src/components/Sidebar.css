@@ -94,6 +94,10 @@
   .menuItem>span{
     display: block;
   }
+  .clickhere{
+    color: black;
+
+  }
   .logo{
     display: flex;
   }

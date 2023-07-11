@@ -52,7 +52,7 @@ const Sidebar = () => {
         })}
         {/* signoutIcon */}
         <div className="menuItem">
-          <UilSignOutAlt /><span><a href="http://localhost:3002/">click here </a></span>
+          <UilSignOutAlt /><span className="clickhere "></span>
         </div>
       </div>
     </motion.div>
